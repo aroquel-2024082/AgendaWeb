@@ -16,6 +16,15 @@ body {
     align-items: center;
     background-color: #f4f7f6;
     overflow: hidden;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    background: #00acc1;
+    border-radius: 10px;
 }
 
 /*.fondo {

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #f8fafc;
+}
+
+.formulario {
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.formulario .titulo {
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    color: #1a202c;
+    padding-bottom: 10px;
+}
+
+.formulario .titulo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.formulario form .detalles-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .detalles-contacto .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.detalles-contacto .input-box .detalles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.detalles-contacto .input-box .detalles i {
+    color: #00acc1;
+}
+
+.detalles-contacto .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.detalles-contacto .input-box input:focus,
+.detalles-contacto .input-box input:valid {
+    border-color: #00acc1;
+    box-shadow: 0 0 0 3px rgba(0, 172, 193, 0.1);
+}
+
+form .genero-detalles .genero-titulo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .genero-detalles .genero-titulo i {
+    color: #00acc1;
+}
+
+form .genero-detalles .opciones {
+    display: flex;
+    width: 50%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+.genero-detalles .opciones label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.genero-detalles .opciones label .punto {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#punto-1:checked ~ .opciones label .uno,
+#punto-2:checked ~ .opciones label .dos {
+    border-color: #d9d9d9;
+    background: #00acc1;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+form .boton {
+    height: 45px;
+    margin: 30px 0;
+}
+
+form .boton button {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    background: #00acc1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(100deg, #6abfce, #184279);
+}
+
+form .boton button:hover {
+    background: #00acc1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 172, 193, 0.3);

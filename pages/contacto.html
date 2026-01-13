@@ -24,7 +24,9 @@
 
             <div class="acciones">
                 <button class="btn favorito"><i class="bi bi-heart"></i></button>
-                <button class="btn ver"><i class="bi bi-eye"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Bellingham', 'Saquic', '+502 1254-9875', '../assets/img/perfil1.svg', 'bellisa@gmail.com', 'Doctor', 'Divorciado', 'Hombre')">
+                    <i class="bi bi-eye"></i>
+                </button>
                 <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
             </div>
 
@@ -43,7 +45,9 @@
 
             <div class="acciones">
                 <button class="btn favorito"><i class="bi bi-heart"></i></button>
-                <button class="btn ver"><i class="bi bi-eye"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Cristopher', 'Maldonado', '+502 8751-5125', '../assets/img/perfil2.jfif', 'crisma@gmail.com', 'Contador', 'Casado', 'Hombre')">
+                    <i class="bi bi-eye"></i>
+                </button>
                 <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
             </div>
 
@@ -62,7 +66,9 @@
 
             <div class="acciones">
                 <button class="btn favorito"><i class="bi bi-heart"></i></button>
-                <button class="btn ver"><i class="bi bi-eye"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Fiore','Aveira','+502 1414-1414','../assets/img/perfil3.jfif','fiore@gmail.com','Financista','Soltero','Hombre')">
+                    <i class="bi bi-eye"></i>
+                </button>
                 <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
             </div>
 
@@ -81,7 +87,9 @@
 
             <div class="acciones">
                 <button class="btn favorito"><i class="bi bi-heart"></i></button>
-                <button class="btn ver"><i class="bi bi-eye"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Alan','Coyote','+502 9090-9090','../assets/img/perfil4.jfif','alan@gmail.com','Ingeniero','Soltero','Hombre')">
+                    <i class="bi bi-eye"></i>
+                </button>
                 <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
             </div>
 
@@ -100,7 +108,9 @@
 
             <div class="acciones">
                 <button class="btn favorito"><i class="bi bi-heart"></i></button>
-                <button class="btn ver"><i class="bi bi-eye"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Iverson','Saquic','+502 1717-1717','../assets/img/perfil5.jfif','iverson@gmail.com','Estudiante','Soltero','Hombre')">
+                    <i class="bi bi-eye"></i>
+                </button>
                 <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
             </div>
 
@@ -119,7 +129,9 @@
 
             <div class="acciones">
                 <button class="btn favorito"><i class="bi bi-heart"></i></button>
-                <button class="btn ver"><i class="bi bi-eye"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Adrian','Realiquez','+502 1212-1212','../assets/img/perfil6.jfif','adrian@gmail.com','Programador','Casado','Hombre')">
+                    <i class="bi bi-eye"></i>
+                </button>
                 <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
             </div>
 
@@ -127,5 +139,28 @@
 
     </div>
 
+    <div id="modalContacto" class="modal">
+        <div class="moda-contenido">
+            <span class="boton-cerrar" onclick="cerrarModal()">&times;</span>
+
+            <div class="modal-encabezado">
+                <div class="modal-avatar">
+                    <img id="m-img" src="" alt="Foto">
+                </div>
+                <h2 id="m-nombre">Nombre</h2>
+                <h2 id="m-apellido">Apellido</h2>
+                <p id="m-trabajo">Puesto</p>
+            </div>
+
+            <div class="modal-cuerpo">
+                <div class="info-c"><i class="bi bi-telephone"></i> <div><span>Teléfono</span><p id="m-tel"></p></div></div>
+                <div class="info-c"><i class="bi bi-envelope"></i> <div><span>Correo</span><p id="m-correo"></p></div></div>
+                <div class="info-c"><i class="bi bi-heart"></i> <div><span>Estado Civil</span><p id="m-estado"></p></div></div>
+                <div class="info-c"><i class="bi bi-gender-ambiguous"></i> <div><span>Género</span><p id="m-genero"></p></div></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../assets/js/modal.js"></script>
 </body>
 </html>

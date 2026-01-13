@@ -90,3 +90,139 @@ body {
     color: #555;
     transform: scale(1.2);
 }
+
+
+/*modal*/
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.moda-contenido {
+    background: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    animation: modalEntrada 0.3s ease-out;
+}
+
+@keyframes modalEntrada {
+    from { 
+        transform: translateY(30px); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+.boton-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 101;
+    transition: transform 0.2s;
+}
+
+.boton-cerrar:hover {
+    transform: scale(1.2);
+}
+
+.modal-encabezado {
+    background: #00acc1;
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.modal-avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0fdfa;
+}
+
+.modal-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#m-nombre, #m-apellido {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 2px;
+}
+
+#m-trabajo {
+    font-size: 13px;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.modal-cuerpo {
+    padding: 25px;
+    background: #ffffff;
+}
+
+.info-c {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.info-c:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info-c i {
+    font-size: 18px;
+    color: #00acc1;
+    background: #f0fdfa;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.info-c span {
+    display: block;
+    font-size: 11px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.info-c p {
+    font-size: 14px;
+    color: #1e293b;
+    margin: 0;
+    font-weight: 500;
+}

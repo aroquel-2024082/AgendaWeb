@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins';
+}
+
+body {
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+.contenedor-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-mujer {
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #00acc1;
+}
+
+.card-mujer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #b9026d;
+}
+
+.avatar img {
+    width: 70px;
+    height: 70px;
+    background-color: #f0fdfa;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 5px;
+}
+
+.informacion p {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 15px;
+}
+
+.acciones {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #888;
+}
+
+.btn.favorito i  {
+    color: #ff4d4d !important;
+}
+
+.btn.favorito:hover {
+    color: #ff4d4d;
+    transform: scale(1.2);
+}
+
+.btn.ver:hover {
+    color: #093ba7;
+    transform: scale(1.2);
+}
+
+.btn.eliminar:hover {
+    color: #555;
+    transform: scale(1.2);
+}
+
+/*modal*/
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-favorito {
+    background: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes modalEntrada {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.boton-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 101;
+    transition: transform 0.2s;
+}
+
+.boton-cerrar:hover {
+    transform: scale(1.2);
+}
+
+.modal-encabezado {
+    background: #00acc1;
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.modal-avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0fdfa;
+}
+
+.modal-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#m-nombre, #m-apellido {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 2px;
+}
+
+#m-trabajo {
+    font-size: 13px;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.modal-cuerpo {
+    padding: 25px;
+    background: #ffffff;
+}
+
+.info-c {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.info-c:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info-c i {
+    font-size: 18px;
+    color: #00acc1;
+    background: #f0fdfa;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.info-c span {
+    display: block;
+    font-size: 11px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.info-c p {
+    font-size: 14px;
+    color: #1e293b;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Estilo para las contacto Mujer */
+
+/* Cambia el encabezado a rosado */
+.modal-favorito.modal-femenino .modal-encabezado {
+    background: #b9026d !important;
+}
+
+/* Aca Se cambian los colores de los iconos a rosado */
+.modal-favorito.modal-femenino .info-c i {
+    color: #b9026d !important;
+    background: #fff0f6 !important;
+}

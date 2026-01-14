@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/favorito.css">
+    <title>Agenda Web - Favoritos</title>
+</head>
+<body>
+    
+    <div class="contenedor-card">
+
+        <div class="card">
+
+            <div class="avatar">
+                <img src="../assets/img/favoritos1.jfif" alt="Imagen de Favoritos 1">
+            </div>
+
+            <div class="informacion">
+                <h2>Santiago Ferrari</h2>
+                <p><i class="bi bi-telephone-fill"></i> +502 1254-8953</p>
+            </div>
+
+            <div class="acciones">
+                <button class="btn favorito"><i class="bi bi-heart"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Santiago', 'Ferrari', '+502 1254-8953', '../assets/img/favoritos1.jfif', 'sanferrari@gmail.com', 'Mecanico', 'Viudo', 'Hombre')">
+                    <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
+            </div>
+
+        </div>
+
+        <div class="card-mujer">
+
+            <div class="avatar">
+                <img src="../assets/img/favoritos2.jfif" alt="Imagen de Favoritos 2">
+            </div>
+
+            <div class="informacion">
+                <h2>Rosi Esposito</h2>
+                <p><i class="bi bi-telephone-fill"></i> +502 2510-5698</p>
+            </div>
+
+            <div class="acciones">
+                <button class="btn favorito"><i class="bi bi-heart"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Rosi', 'Esposito', '+502 2510-5698', '../assets/img/favoritos2.jfif', 'rosi@gmail.com', 'Abogada', 'Soltera', 'Mujer')">
+                    <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
+            </div>
+
+        </div>
+
+        <div class="card-mujer">
+
+            <div class="avatar">
+                <img src="../assets/img/favoritos3.jfif" alt="Imagen de Favoritos 3">
+            </div>
+
+            <div class="informacion">
+                <h2>Giulia Bianchi</h2>
+                <p><i class="bi bi-telephone-fill"></i> +502 8210-9631</p>
+            </div>
+
+            <div class="acciones">
+                <button class="btn favorito"><i class="bi bi-heart"></i></button>
+                <button class="btn ver" onclick="mostrarDetalles('Giulia', 'Bianchi', '+502 8210-9631', '../assets/img/favoritos3.jfif', 'giulia@gmail.com', 'Doctora', 'Soltera', 'Mujer')">
+                    <i class="bi bi-eye"></i>
+                </button>
+                <button class="btn eliminar"><i class="bi bi-trash3"></i></button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="modalFavorito" class="modal">
+        <div class="modal-favorito">
+            <span class="boton-cerrar" onclick="cerrarModal()">&times;</span>
+
+            <div class="modal-encabezado">
+                <div class="modal-avatar">
+                    <img id="m-img" src="" alt="Foto">
+                </div>
+                <h2 id="m-nombre">Nombre</h2>
+                <h2 id="m-apellido">Apellido</h2>
+                <p id="m-trabajo">Puesto</p>
+            </div>
+
+            <div class="modal-cuerpo">
+                <div class="info-c"><i class="bi bi-telephone"></i> <div><span>Teléfono</span><p id="m-tel"></p></div></div>
+                <div class="info-c"><i class="bi bi-envelope"></i> <div><span>Correo</span><p id="m-correo"></p></div></div>
+                <div class="info-c"><i class="bi bi-heart"></i> <div><span>Estado Civil</span><p id="m-estado"></p></div></div>
+                <div class="info-c"><i class="bi bi-gender-ambiguous"></i> <div><span>Género</span><p id="m-genero"></p></div></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

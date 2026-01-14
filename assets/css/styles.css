@@ -90,6 +90,19 @@ body::-webkit-scrollbar-thumb {
     gap: 10px;
 }
 
+.perfil-iframe {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.perfil-iframe:hover {
+    opacity: 0.8;
+}
+
 .perfil h1 {
     font-size: 14px;
     font-weight: 400;

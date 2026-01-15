@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/pendientes.css">
+    <title>Agenda Web - Pendientes</title>
+</head>
+<body>
+
+    <div class="contenedor-agenda">
+        <h1>Agregar Una Tarea</h1>
+        
+        <div class="formulario-tarea">
+            <input type="text" id="tareaP" placeholder="Escribe ...">
+            <select id="prioridad">
+                <option value="1">Prioridad Alta</option>
+                <option value="2" >Prioridad Media</option>
+                <option value="3">Prioridad Baja</option>
+            </select>
+            <button id="agregar">Agregar</button>
+        </div>
+
+        <hr class="separador">
+        <div id="contenedor-lista" class="lista"></div>
+    </div>
+
+    <div id="modalOculto" class="modal-escondido"></div>
+
+    <script src="../assets/js/pendientes.js"></script>
+</body>
+</html>

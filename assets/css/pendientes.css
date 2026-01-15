@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* { 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    background-color: #f4f7f6; 
+    padding: 10px;
+}
+
+.contenedor-agenda {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    background: white;
+    padding: 20px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 { 
+    margin-bottom: 20px; 
+    font-size: 20px; 
+    color: #333; 
+    text-align: center;
+}
+
+.formulario-tarea { 
+    display: flex; 
+    gap: 10px; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+#tareaP { 
+    flex: 2; 
+    min-width: 150px;
+    padding: 10px; 
+    border-radius: 6px; 
+    border: 1px solid #ccc; 
+    outline: none; 
+}
+
+#prioridad { 
+    flex: 1; 
+    min-width: 120px;
+    padding: 10px; 
+    border-radius: 6px; 
+    border: 1px solid #ccc; 
+}
+
+#agregar { 
+    width: 100%;
+    background: #00acc1; 
+    color: white; 
+    border: none; 
+    padding: 12px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.tarjeta-tarea {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background: #fff; 
+    padding: 12px; 
+    margin-bottom: 10px;
+    border-radius: 8px; 
+    border-left: 8px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    gap: 10px;
+}
+
+@media (max-width: 480px) {
+    .formulario-tarea {
+        flex-direction: column;
+    }
+    
+    #tareaP, #prioridad, #agregar {
+        flex: none;
+        width: 100%;
+    }
+
+    .tarjeta-tarea {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .iconos {
+        align-self: flex-end;
+    }
+}
+
+.separador { 
+    margin: 20px 0; 
+    border: 0; 
+    border-top: 1px solid #eee; 
+}
+
+.prio-1 { 
+    border-left-color: #ff5252; 
+}
+
+.prio-2 { 
+    border-left-color: #ffd740; 
+}
+
+.prio-3 { 
+    border-left-color: #69f0ae; 
+}
+
+.iconos button { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 20px; 
+    margin-left: 15px; 
+}
+
+#modalOculto {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.6); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 100;
+}
+
+.modal-escondido { 
+    display: none !important; 
+}
+
+.caja-edicion {
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 90%; 
+    max-width: 320px; 
+    text-align: center;
+}
+
+.btn-guardar { 
+    background: #00acc1; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.btn-cerrar { 
+    background: #ddd; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-right: 5px; 
+}
+
+.color-editar { 
+    color: #00acc1; 
+}
+
+.color-borrar { 
+    color: #ff5252; 
+}

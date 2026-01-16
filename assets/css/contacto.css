@@ -226,3 +226,107 @@ body {
     margin: 0;
     font-weight: 500;
 }
+
+/*Responsive*/
+
+@media (max-width: 900px) {
+    body {
+        padding: 15px;
+        background-color: #ffffff;
+    }
+
+    .contenedor-card {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .avatar img {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 10px;
+    }
+
+    .informacion h2 {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .informacion p {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .acciones {
+        padding-top: 10px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .moda-contenido {
+        width: 95%;
+        max-width: none;
+        margin: 10px;
+    }
+
+    .modal-encabezado {
+        padding: 20px 15px;
+    }
+
+    .modal-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    #m-nombre, #m-apellido {
+        font-size: 18px;
+    }
+
+    .modal-cuerpo {
+        padding: 15px;
+    }
+
+    .info-c {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .info-c p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 350px) {
+    .contenedor-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .avatar img {
+        margin-bottom: 0;
+    }
+
+    .acciones {
+        border-top: none;
+        border-left: 1px solid #f0f0f0;
+        width: auto;
+        flex-direction: column;
+        padding-top: 0;
+        padding-left: 10px;
+        margin-top: 0;
+    }
+}

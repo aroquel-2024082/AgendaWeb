@@ -163,3 +163,55 @@ form .boton button:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 172, 193, 0.3);
 }
+
+/*Responsive*/
+
+@media (max-width: 600px) {
+    body {
+        height: auto; 
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .formulario {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .formulario .titulo {
+        font-size: 20px;
+    }
+
+    form .detalles-contacto .input-box {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    form .genero-detalles .opciones {
+        width: 100%;
+    }
+
+    form .genero-detalles .genero-titulo {
+        font-size: 18px;
+    }
+
+    form .boton {
+        height: 50px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .formulario {
+        padding: 15px;
+    }
+
+    .detalles-contacto .input-box input {
+        font-size: 14px;
+    }
+
+    .genero-detalles .opciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
